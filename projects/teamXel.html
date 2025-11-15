@@ -1,77 +1,185 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TeamXel — Project Management Tool — Noor Fathima A.</title>
-  <meta name="description" content="TeamXel — Project Management Tool. Built at IBM. Features: task tracking, timesheet management, employee management, Agile sprint planning. Built with Python & Flask and more." />
-  <link rel="stylesheet" href="/css/main.css" />
-  <meta property="og:title" content="TeamXel — Project Management Tool" />
-  <meta property="og:description" content="A project management tool developed while working at IBM to enhance team collaboration, task tracking, and Agile workflows." />
-  <meta property="og:image" content="/assets/projects/teamxel/screenshot-1.jpg" />
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Base styles — pastel card layout like your Crux example */
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: linear-gradient(135deg, #f6fbff, #fff7fb);
+      margin: 0;
+      padding: 30px;
+      color: #333;
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 28px auto;
+      background: #ffffffd9;
+      padding: 35px;
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #4b62d6;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      margin-top: 24px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #6a5acd;
+      border-left: 4px solid #c8ccff;
+      padding-left: 10px;
+    }
+
+    p, ul, li {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    ul { margin-top: 8px; }
+    li { margin-bottom: 8px; }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    .back-btn {
+      padding: 10px 14px;
+      background: #7aa7ff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      box-shadow: 0 3px 10px rgba(122, 167, 255, 0.3);
+      transition: 0.18s;
+    }
+
+    .back-btn:hover { transform: translateY(-2px); background:#5a8bff; }
+
+    .project-meta p { margin: 0; text-align: right; color: #444; font-size: 14px; }
+
+    @media (max-width: 700px) {
+      .top-bar { flex-direction: column; gap: 12px; }
+      .project-meta p { text-align: left; }
+    }
+
+    .proj-img-box {
+      margin-top: 16px;
+      background: #f3f4ff;
+      border: 1px solid #e0e4ff;
+      padding: 12px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .proj-img-box img { width: 100%; max-width: 860px; border-radius: 10px; display: block; }
+
+    .cta {
+      margin-top: 20px;
+      padding: 14px;
+      background: #f7fbff;
+      border-radius: 10px;
+      border: 1px solid #e6f0ff;
+    }
+
+    .links { margin-top: 10px; }
+    .links a { color: #2b6ef6; text-decoration: none; margin-right: 12px; }
+    .note { color:#777; font-size:14px; margin-top:8px; }
+  </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="logo">Noor Fathima A.</a>
-      <nav class="nav"><a href="/">Home</a> • <a href="/#project-section">Projects</a></nav>
-    </div>
-  </header>
+  <div class="wrap">
+    <div class="top-bar">
+      <a href="../index.html" class="back-btn">⬅ Back to Portfolio</a>
 
-  <main class="container project-page">
-    <section class="project-hero">
-      <h1>TeamXel</h1>
-      <p class="subtitle">Project Management Tool — Feb 2023 – Apr 2024</p>
-      <p class="meta">
-        <strong>Associated with:</strong> IBM &nbsp; • &nbsp;
-        <strong>Role:</strong> Backend & API Development
-        &nbsp; • &nbsp;
-        <strong>Built with:</strong> Python, Flask, RESTful APIs, PostgreSQL, Docker
-        &nbsp; • &nbsp;
-        <strong>Live:</strong>
-        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-link">View Live</a>
-        &nbsp; • &nbsp;
-        <a href="https://github.com/NoorFathimaAziz?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn-outline">GitHub</a>
-      </p>
-    </section>
-
-    <section class="project-overview">
-      <h2>Overview</h2>
-      <p>TeamXel is a project management tool developed while working at IBM, tailored for a client to enhance team collaboration, task tracking, and Agile workflow execution. The platform centralizes task management, timesheets, employee records, and sprint planning to digitize everyday project tracking and reporting.</p>
-
-      <h3>Key contributions</h3>
-      <ul>
-        <li>Built and integrated Flask-based RESTful APIs to support real-time updates for task status, user actions, and project progress.</li>
-        <li>Implemented task tracking, timesheet management, employee management, and Agile sprint planning modules.</li>
-        <li>Designed scalable backend logic, secure endpoints, and optimized data models for performance and maintainability.</li>
-        <li>Enabled efficient data flow between frontend and backend to support dynamic UI interactions and seamless user experience.</li>
-        <li>Improved team productivity by automating project tracking and reporting processes.</li>
-      </ul>
-
-      <h3>Tech stack & architecture</h3>
-      <p><strong>Core:</strong> Python (Programming Language), Flask (RESTful APIs)<br>
-         <strong>Other:</strong> PostgreSQL, Docker, Celery (background jobs) — replace or update according to your actual stack.</p>
-
-      <h3>How I contributed</h3>
-      <ul>
-        <li>Authored backend endpoints and API contracts consumed by the frontend team.</li>
-        <li>Implemented transactional data flows and ensured data integrity across modules.</li>
-        <li>Worked closely with frontend engineers and QA to deliver stable releases on schedule.</li>
-      </ul>
-
-      <h3>Screenshots & demo</h3>
-      <p style="color:#777; font-size:14px;">Note: Due to company confidentiality policies, UI screenshots and internal code for this project cannot be shared publicly. I am happy to discuss my role and show permitted artifacts during interviews or with an NDA.</p>
-
-      <div class="project-gallery" aria-hidden="true">
-        <!-- intentionally empty due to confidentiality; keep this container for when permitted assets are available -->
+      <div class="project-meta">
+        <p><strong>Duration:</strong> Sept 2024 – Present</p>
+        <p><strong>Company:</strong> Sujanix Private Limited (CMMI Level 3)</p>
       </div>
+    </div>
 
-  </main>
+    <h1>TeamXel</h1>
 
-  <footer class="site-footer">
-    <div class="container">© Noor Fathima A. — <a href="/">Portfolio</a></div>
-  </footer>
+    <h2 class="section-title">Overview</h2>
+    <p>
+      TeamXel (Project Management Tool) is a client-focused project management platform developed during my tenure at IBM to improve team collaboration,
+      streamline task tracking, timesheets and Agile sprint planning. The platform centralizes project operations, providing
+      managers and teams with actionable insights and automated reporting.
+    </p>
 
-  <script src="/js/main.js"></script>
+    <h2 class="section-title">Impactful contributions</h2>
+    <ul>
+      <li>Built core backend features including task tracking, timesheets, employee management, and Agile sprint planning.</li>
+      <li>Developed secure and scalable RESTful APIs using Python &amp; Flask to support real-time updates and seamless frontend interaction.</li>
+      <li>Designed optimized data models for tasks, sprints, and employee workflows to ensure high performance under load.</li>
+      <li>Implemented role-based access control, endpoint security, and robust data validation across the platform.</li>
+      <li>Automated tracking and reporting workflows, significantly reducing manual effort and improving client productivity.</li>
+    </ul>
+
+    <h2 class="section-title">Tech stack</h2>
+    <ul>
+      <li><strong>Core:</strong> Python, Flask</li>
+      <li><strong>Backend:</strong> PostgreSQL</li>
+      <li><strong>Deployment:</strong> AWS </li>
+      <li><strong>Frontend:</strong> ReactJS (integrated with the REST API)</li>
+    </ul>
+
+    <h2 class="section-title">How I worked</h2>
+    <ul>
+      <li>Authored RESTful endpoints and API contracts consumed by the frontend team for dynamic UI updates.</li>
+      <li>Collaborated with frontend engineers & QA to ensure smooth releases and reliable data flows.</li>
+    </ul>
+
+    <h2 class="section-title">Screenshots & demo</h2>
+
+    <!-- Replace src paths with your actual images -->
+    <div class="proj-img-box">
+      <img src="../images/teamxel1.png" alt="TeamXel Dashboard screenshot">
+    </div>
+    <div class="proj-img-box">
+      <img src="../images/teamxl2.png" alt="TeamXel Dashboard screenshot">
+    </div>
+    <div class="proj-img-box">
+      <img src="../images/teamxel3.png" alt="TeamXel Dashboard screenshot">
+    </div>
+
+    <div class="proj-img-box">
+      <img src="../images/teamxel4.png" alt="TeamXel Task Management screenshot">
+    </div>
+
+    <div class="proj-img-box">
+      <img src="../images/teamxel5.png" alt="TeamXel Timesheet screenshot">
+    </div>
+
+    <div class="proj-img-box">
+      <img src="../images/teamxel6.png" alt="TeamXel Sprint Planning screenshot">
+    </div>
+
+    <div class="cta">
+      <p><strong>Live / Repo</strong></p>
+      <div class="links">
+        <a href="https://www.teamxel.com/auth/sign-in?returnTo=%2Fmain%2Fdashboard" target="_blank" rel="noopener noreferrer">Live (Client)</a>
+        <a href="https://github.com/NoorFathimaAziz?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+
+  </div>
 </body>
+
 </html>
