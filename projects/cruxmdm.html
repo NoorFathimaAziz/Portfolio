@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CruxMDM — Chrome Management (Admin Console)</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Base styles */
+        /* Soft pastel gradient background */
+        body {
+            font-family: "Inter", Arial, sans-serif;
+            background: linear-gradient(135deg, #f3f7ff, #fef6ff);
+            margin: 0;
+            padding: 30px;
+        }
+
+        /* Pastel white card */
+        .wrap {
+            max-width: 1000px;
+            margin: 28px auto;
+            background: #ffffffd9;
+            /* soft white */
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(6px);
+        }
+
+        /* Headings */
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #5a6fe0;
+            margin-bottom: 10px;
+        }
+
+        .crux-section-title {
+            margin-top: 28px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #6a5acd !important;
+            /* soft lavender */
+            border-left: 4px solid #b4b6ff;
+            padding-left: 10px;
+        }
+
+        /* Text */
+        p,
+        ul,
+        li {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Lists spacing */
+        ul {
+            margin-top: 8px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        /* Back button (pastel blue) */
+        .back-btn {
+            padding: 10px 14px;
+            background: #7aa7ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            box-shadow: 0 3px 10px rgba(122, 167, 255, 0.3);
+            transition: 0.2s;
+        }
+
+        .back-btn:hover {
+            background: #5a8bff;
+            box-shadow: 0 4px 14px rgba(122, 167, 255, 0.4);
+        }
+
+        /* Project meta right side */
+        .project-meta p {
+            margin: 0;
+            text-align: right;
+            color: #444;
+            font-size: 14px;
+        }
+
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .top-bar {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .project-meta p {
+                text-align: left;
+            }
+        }
+
+        /* Screenshot container */
+        .proj-img-box {
+            margin-top: 18px;
+            background: #f3f4ff;
+            border: 1px solid #d8dcff;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Screenshot image */
+        .proj-img-box img {
+            width: 80%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="top-bar">
+            <a href="../index.html" class="back-btn">⬅ Back to Portfolio</a>
+
+            <div class="project-meta">
+                <p><strong>Duration:</strong> June 2023 – Sep 2024</p>
+                <p><strong>Company:</strong> IBM (Kyndryl)</p>
+            </div>
+        </div>
+
+        <h1>CRUX – Chrome MDM (Chrome Device Management Platform)</h1>
+
+        <h2 class="crux-section-title">Overview</h2>
+        <p>
+            CRUX is an enterprise ChromeOS device management platform enabling automated provisioning,
+            policy enforcement and centralized control of Chrome devices across organizations.
+        </p>
+
+        <h2 class="crux-section-title">Full-Stack Development</h2>
+        <ul>
+            <li>Developed core modules using ReactJS (frontend) and Flask (backend) with PostgreSQL + SQLAlchemy.</li>
+            <li>Built modular UI components, REST APIs, and database models for devices, users, and policies.</li>
+        </ul>
+
+        <h2 class="crux-section-title">Google Admin SDK Automation</h2>
+        <ul>
+            <li>Integrated Admin SDK for Chromebook provisioning, user sync, and policy automation.</li>
+            <li>Reduced manual IT effort by automating device and policy workflows.</li>
+        </ul>
+
+        <h2 class="crux-section-title">Organizational Hierarchy & Access Control</h2>
+        <ul>
+            <li>Created multi-level hierarchy (Org → Groups → Users) with inheritance & overrides.</li>
+            <li>Handled all 1074 ChromeOS policies dynamically for users and devices.</li>
+        </ul>
+
+        <h2 class="crux-section-title">Security & API Architecture</h2>
+        <ul>
+            <li>Implemented JWT authentication and role-based access control for secure operations.</li>
+            <li>Ensured encrypted credential handling and strict validation for admin workflows.</li>
+        </ul>
+
+        <h2 class="crux-section-title">AWS Deployment</h2>
+        <ul>
+            <li>Deployed backend on EC2, frontend on Amplify, and stored logs/reports on S3.</li>
+            <li>Used Redis caching and Route 53 for DNS and domain routing.</li>
+        </ul>
+
+        <h2 class="crux-section-title usecases-title">Use Cases</h2>
+        <ul>
+            <li>Remotely manage Chromebooks without physical access.</li>
+            <li>Apply all 1,074 Chrome OS policies centrally from one dashboard.</li>
+            <li>Control users, groups, and org units with structured access levels.</li>
+            <li>Automate provisioning and policy updates via Google Admin SDK.</li>
+        </ul>
+
+        <h2 class="crux-section-title techstack-title">Tech Stack</h2>
+        <ul>
+            <li><strong>Frontend:</strong> ReactJS, Axios</li>
+            <li><strong>Backend:</strong> Python (Flask), REST APIs, PostgreSQL, SQLAlchemy</li>
+            <li><strong>Deployment:</strong> AWS EC2, Amplify, Redis, S3, Route 53</li>
+            <li><strong>Methodology:</strong> Agile, Scrum</li>
+        </ul>
+
+        <h2 class="crux-section-title">Project Screenshots</h2>
+        <p style="color:#777; font-size:14px;">
+            Note: Due to company confidentiality policies, UI screenshots and internal code for this project cannot be
+            shared publicly.
+        </p>
+
+        <div class="proj-img-box">
+            <img src="../images/crux1.png" alt="Dashboard Screenshot">
+        </div>
+
+        <div class="proj-img-box">
+            <img src="../images/crux2.png" alt="Policies Screenshot">
+        </div>
+
+        <div class="proj-img-box">
+            <img src="../images/crux3.png" alt="Users Screenshot">
+        </div>
+        <div class="proj-img-box">
+            <img src="../images/crux4.png" alt="Users Screenshot">
+        </div>
+
+
+    </div>
+</body>
+
+
+</html>

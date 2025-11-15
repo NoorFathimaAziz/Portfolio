@@ -9067,6 +9067,13 @@ textarea.form-control {
   opacity: 0;
   visibility: hidden; }
 
+  .project-link-custom {
+    color: #007bff !important;
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+
 .bg-primary {
   background: #ffbd39 !important; }
 
@@ -9078,12 +9085,12 @@ textarea.form-control {
   .about-author .desc h3 {
     font-size: 24px; }
 
-.ftco-section {
+/* .ftco-section {
   padding: 7em 0;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 6em 0; } }
+      padding: 6em 0; } } */
 
 .ftco-no-pt {
   padding-top: 0 !important; }
@@ -9470,8 +9477,10 @@ textarea.form-control {
     font-weight: 300; }
     .block-21 .text .heading a {
       color: #fff; }
+      
       .block-21 .text .heading a:hover, .block-21 .text .heading a:active, .block-21 .text .heading a:focus {
         color: #ffbd39; }
+        
   .block-21 .text .meta > div {
     display: inline-block;
     margin-right: 5px; }
@@ -9586,6 +9595,13 @@ textarea.form-control {
     font-weight: 600;
     margin-bottom: 20px;
     font-size: 20px; }
+
+.project-link-custom {
+    color: #007bff !important;
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
 
 .categories, .sidelink {
   padding: 0;
